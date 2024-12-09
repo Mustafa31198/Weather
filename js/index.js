@@ -29,8 +29,6 @@ async function getWeather(cityName) {
     display();
 }
 
-
-
 function display() {
     cartona = '';
     for (let i = 0; i < allWeather.length; i++) {
@@ -112,7 +110,7 @@ searchBtnInput.addEventListener('input', function () {
     
         let allWeather = [];
         async function getWeather(cityName) {
-            let weather = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=182a8f7d6826422d84701915240812&q=${cityName}&days=3`);
+            let weather = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=182a8f7d6826422d84701915240812&q=${cityName}&days=3`);
             let finalResult = await weather.json();
             allWeather.push(finalResult);
 
